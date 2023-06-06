@@ -15,10 +15,10 @@ const Navbar = async ({}) => {
             Text Similarity 1.0
         </Link>
         <div className='md:hidden'>
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
         </div>
         <div className='hidden md:flex gap-4'>
-            {/* <ThemeToggle/> */}
+            <ThemeToggle/>
             <Link href='/documentation' className={buttonVariants({variant: 'ghost'})}>
                 Documentaion
             </Link>
