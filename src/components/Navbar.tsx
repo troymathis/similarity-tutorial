@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { buttonVariants } from './ui/Button'
 import SignInButton from '@/components/SignInButton'
 import SignOutButton from './SignOutButton'
+import ThemeToggle from './ui/ThemeToggle'
 
 interface NavbarProps {}
 
