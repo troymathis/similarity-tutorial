@@ -1,15 +1,15 @@
 'use client'
 
 import { Children, FC, useEffect, useState } from "react";
-import { Highlight, themes, type Language } from "prism-react-renderer"
+import { Highlight, themes } from "prism-react-renderer"
 import { useTheme } from "next-themes"
 
 interface CodeProps {
-  code: string;
-  show: boolean;
-  language: Language;
-  animationDelay?: number;
-  animated?: boolean;
+  code: string
+  show: boolean
+  language: string
+  animationDelay?: number
+  animated?: boolean
 }
 
 const Code: FC<CodeProps> = ({
