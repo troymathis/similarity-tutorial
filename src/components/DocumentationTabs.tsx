@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/Tabs'
 import SimpleBar from 'simplebar-react'
+import Code from '@/components/Code'
+import { nodejs } from '@/helpers/documentation-code'
 
 const DocumentationTabs: FC = () => {
   return (
@@ -11,7 +13,7 @@ const DocumentationTabs: FC = () => {
     </TabsList>
     <TabsContent value='nodejs'>
         {/* <SimpleBar></SimpleBar> */}
-        <Code />
+        <Code language='javascript' code={nodejs} show/>
     </TabsContent>
     <TabsContent value='nodejs'></TabsContent>
   </Tabs>
