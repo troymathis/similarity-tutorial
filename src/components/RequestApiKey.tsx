@@ -6,6 +6,9 @@ import { createApiKey } from "@/helpers/create-api-key";
 import { Key } from "lucide-react";
 import LargeHeading from "@/components/ui/LargeHeading";
 import Paragraph from "./ui/Paragraph";
+import CopyButton from "@/components/CopyButton";
+import { Input } from "./ui/Input";
+import Button from "./ui/Button";
 
 const RequestApiKey: FC = () => {
   const [isCreating, setIsCreating] = useState<boolean>(false);
@@ -54,8 +57,13 @@ const RequestApiKey: FC = () => {
       >
         <div className="relative rounded-md shadow-sm sm:min-w-0 sm:flex-1">
           {apiKey ? (
-            <CopyButton className="absolute inset-y-0 right-0 animate-in fade-in duration-300"/>
+            <CopyButton valueToCopy={apiKey} type='button' className="absolute inset-y-0 right-0 animate-in fade-in duration-300"
+            />
           ) : null}
+          <Input readOnly value={apiKey ?? ''} placeholder="Request an API key to display it here!"/>
+        </div>
+        <div className="mt-3 flex justify-center sm:mt-0 sm:ml-4 sm:flex-shrink-0">
+          <Button disabled={!!apiKey} isLoading={isCreating}>Request key</Button>
         </div>
       </form>
     </div>
