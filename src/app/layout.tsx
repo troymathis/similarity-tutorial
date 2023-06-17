@@ -18,16 +18,17 @@ export default function RootLayout({
       className={cn("bg-white text-slate-900 antialiased", inter.className)}
     >
       <body className="min-h-screen bg-slate-50 dark:bg-slate-900 antialiased">
-        <Providers>{children}
-        <Toaster position='bottom-right'/>
+        <Providers>
 
+          {/* @ts-expect-error Server Component */}
+          <Navbar />
+          <Toaster position="bottom-right" />
 
-        {/* @ts-expect-error Server Component */}
-        <Navbar />
+          <main>{children}</main>
         </Providers>
 
         {/* Allow for more height on mobile devices */}
-        <div className='h-40 md:hidden'/>
+        <div className="h-40 md:hidden" />
       </body>
     </html>
   );

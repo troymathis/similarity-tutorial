@@ -1,9 +1,10 @@
-import type { ReactNode } from "react"
+import '@/styles/globals.css'
 
-export default function Layout({
-    children
+export default function RootLayout({
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode
 }) {
-    return <section className="pt-20">{children}</section>
+  // offset navbar height
+  return <section className='pt-20'>{children}</section>
 }
